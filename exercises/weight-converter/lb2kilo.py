@@ -1,6 +1,6 @@
 def main():
     print("This program can convert your weight from lbs to kilos and vice versa.")
-    
+
     weight = int(input("Input your weight here: "))
 
     metric = input("(L)bs or (K)g: ").upper()
@@ -14,7 +14,6 @@ def main():
         print(f"Your weight is {kilos2pounds} lbs")
     else:
         print("Error: wrong input")
-
 
 if __name__ == '__main__':
     main()
