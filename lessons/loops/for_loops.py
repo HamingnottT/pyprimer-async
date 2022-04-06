@@ -1,9 +1,6 @@
-import lessons
-
 def main():
-    pass
+    print("for")
 
 if __name__ == '__main__':
     main()
-    
     
