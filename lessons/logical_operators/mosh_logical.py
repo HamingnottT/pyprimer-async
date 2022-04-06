@@ -29,8 +29,5 @@ def main():
     else:
         print("Name looks good!")
 
-
-    
-
 if __name__ == '__main__':
     main()
