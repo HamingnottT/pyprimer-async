@@ -18,4 +18,12 @@ in addition to strings. this is where positional order matters most.
 
 kwargs = keyword arguments
 
-kwargs handle arguements in a much more dynamic way.
+kwargs handle arguements in a much more dynamic way. order of arguemnt presence does not matters
+
+from: greet_user(first_name, last_name):
+
+syntax:
+
+greet_user(last_name="Smith", first_name="John")
+
+Note: if you pass in one kwarg you must pass in the other arguements as kwargs
