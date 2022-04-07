@@ -1,0 +1,21 @@
+In functions, you are typically dealing with positional arguments.
+As such these args are read base on the postion that they are defined
+
+ex. greet_user(first_name, last_name):
+
+This example shows positional arguements, where first name must always be defined before the last name
+inputing anything else beside the aforementioned causes side effects
+
+greet_user("John", "Smith")
+
+greet_user("Smith", "John")
+
+granted this isn't he best example because if we were to add a print statement to this function calling the args
+it would return both strings but in different order based on their coding.
+
+In other programs, there is a much more profound effect, especially when a function is taking other types
+in addition to strings. this is where positional order matters most.
+
+kwargs = keyword arguments
+
+kwargs handle arguements in a much more dynamic way.
