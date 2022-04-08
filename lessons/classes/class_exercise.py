@@ -11,5 +11,5 @@ def main():
     person = Person(name)   # it seems to be important to declare a variable when instantiating a class object
     person.talk()           # this variable then is what you can call methods on
 
-    bob = Person("John Snow")
-    person.talk()           
+    bob = Person("Bob Smith")
+    bob.talk()
