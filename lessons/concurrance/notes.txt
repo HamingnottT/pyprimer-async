@@ -1,0 +1,46 @@
+Process: An instance of a program (e.g. a python interpreter)
+
++ Takes advantage of multiple CPU's and cores (can process on multiple cpus and cores)
++ Separate memory space -> Memory is not shared between processes
++ Great for CPU-bound processing
++ New process is stated independaently from other processes
++ Processes are interuptable/killable
++ One GIL (global interpreter lock) for each process -> avoids GIL limitation
+
+- Heavyweight
+- Starting a process is slower than starting a thread
+- More memory
+- IPC (inter-process communication) is more complicated
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread: Entity within a process that can be scheduled (also known as "lightweight process")
+
+A process can spawn multiple threads
+
++ All threads within a process share the same memory
++ lightweight
++ Starting a thread is faster than starting a process
++ Great for I/O-bound tasks
+
+- Threading is limited by GIL: Only one thread at a time
+- No effect for CPU-bound tasks
+- Not interuptable/killable - this can cause memory leaks or memory overflow
+- Carefule with race conditions
+    - A race condition occurs when two or more threads want to modify the same variable at the same time (can cause bugs or outright crashes)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GIL: Global interpreter Lock
+- A lock that allows only one thread at a time to execute in a given process
+
+- needed in CPython because memory management is not thread-safe
+    - CPython uses 'reference counting' to manage memory
+        - in reference counting, objects created in python have a reference count variable that keeps track of
+        the number of references that point to that object. When this countreaches zero, the memory occupied by
+        the object can potentially be released.
+
+- How to avoid the GIL:
+    - Using multiprocessing - in this case multithreading is ill-advised
+    - use any different, free-threaded python implementation (Jython, IronPython)
+    - use Python as a wrapper for third-party libraries (C/C++) -> numpy, scipy
