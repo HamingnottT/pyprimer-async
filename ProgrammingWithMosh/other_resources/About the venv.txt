@@ -1,0 +1,27 @@
+Venv = a virtual environment in python projects that is independant from the global python installation/interpreter
+
++ Has its own python interpreter under Scripts folder
+
++ pip installs go in this virtual environment preventing clutter of the main/global pip installer environment
+
+-> to create and activate a virtual environment in the project working directory in VScode:
+
+	1. In the terminal to create, 
+		- $ python -3 -m venv .venv
+		- > python -3 -m venv .venv
+		
+	2. In the terminal to activate,
+		- $ source .venv/Scripts/activate ~~~~ To deactivate: source .venv/Scripts/deactivate
+		- > .venv\Scripts\activate.bat ~~~~~~~ To deactivate: .venv\Scripts\deactivate.bat
+		
+-> to install modules and librarys from pip in venv
+
+	1. Create a requirements.txt if you know/have the library version,
+		- in a second terminal call:
+			$ pip freeze
+			to list all global pip installs - the format can be pasted into the requirements.txt
+			$ pip install -r requirements.txt
+		
+	2. Classic pip install,
+		$ pip install pyspark
+		
