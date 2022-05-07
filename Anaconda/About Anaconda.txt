@@ -1,0 +1,23 @@
+Anaconda = an open-source version of Python that comes prepackaged with necessary Data Science and ML tools
+
+Conda = Anaconda's built-in package manager similar to pip with a few differences
+
+-> setting up for first time:
+	1. Make sure these directories from the installation folder are added to PATH:
+		- %anaconda3%\Library\bin
+		- %anaconda3%\Scripts
+		- %anaconda3%
+
++ You can create project environments using conda
+
+-> to create an environment similar to a venv in the working directory:
+	
+	1. In the terminal to create,
+		- > conda create --prefix .\<chosen name> <extra options & python version>
+		What I use:
+		- > conda create --prefix .\.envs
+
+	2. In the terminal to activate,
+		- > conda activate .\<chosen name> ~~~~ To deactivate: conda deactivate
+		What I use:
+		- > conda create --prefix .\.envs  ~~~~ To deactivate: conda deactivate
